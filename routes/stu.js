@@ -33,7 +33,8 @@ router.post('/create', function(req, res){
 		var stus = JSON.parse(data).stus
 		console.log(stus.length)
 	    //压入新数据 
-	    stu.id = stus[stus.length - 1].id + 1
+	    stu.id = stus.length + 1
+
 	    stu.create_at = date
 	    stus.push(stu)
 	    //转化为字符串
